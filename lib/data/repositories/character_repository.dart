@@ -1,9 +1,7 @@
 import '../models/character.dart';
 import '../services/api_service.dart';
 
-/// Sits between the provider and ApiService.
-/// In future: add caching, offline support, or swap data source here
-/// without touching any UI code.
+
 class CharacterRepository {
   const CharacterRepository(this._apiService);
 

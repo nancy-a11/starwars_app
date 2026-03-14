@@ -64,7 +64,6 @@ class _CharacterCardState extends State<CharacterCard>
     return parts[0][0].toUpperCase();
   }
 
-  // Alternate between primary and secondary from the theme
   Color _accentColor(ColorScheme cs) =>
       widget.index.isEven ? cs.primary : cs.secondary;
 

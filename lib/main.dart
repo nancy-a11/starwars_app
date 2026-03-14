@@ -26,8 +26,7 @@ class StarWarsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        /// Dependencies flow top-down:
-        /// ApiService → CharacterRepository → CharactersProvider
+       
         Provider(create: (_) => const ApiService()),
         ProxyProvider<ApiService, CharacterRepository>(
           update: (_, api, __) => CharacterRepository(api),

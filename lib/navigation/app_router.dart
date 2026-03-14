@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import '../features/characters/characters_screen.dart';
+
+/// Central place to define all named routes.
+/// Add new routes here as the app grows — no hunting through main.dart.
+class AppRouter {
+  static const String characters = '/';
+
+  static Route<dynamic> generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case characters:
+        return MaterialPageRoute(
+          builder: (_) => const CharactersScreen(),
+        );
+      default:
+        return MaterialPageRoute(
+          builder: (_) => const Scaffold(
+            body: Center(child: Text('Page not found')),
+          ),
+        );
+    }
+  }
+}
